@@ -1,0 +1,27 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'XYWeiBo' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for XYWeiBo
+      pod 'AFNetworking'
+      pod 'SVProgressHUD'
+      pod 'SDWebImage'
+      pod 'MJRefresh'
+      
+      
+      
+
+  target 'XYWeiBoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'XYWeiBoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

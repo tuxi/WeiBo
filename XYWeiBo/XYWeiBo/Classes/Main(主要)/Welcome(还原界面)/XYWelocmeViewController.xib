@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYWelocmeViewController" customModule="XYWeiBo" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="vZm-Bl-WI6" id="2YE-qJ-Rot"/>
+                <outlet property="profileView" destination="Fel-pc-EGW" id="21U-Xv-Mbx"/>
+                <outlet property="view" destination="yow-8J-pI7" id="DzI-ug-HXv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yow-8J-pI7">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_background" translatesAutoresizingMaskIntoConstraints="NO" id="kos-ED-CWN"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZm-Bl-WI6" userLabel="content View">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎回来" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqy-iV-XRD">
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="Fel-pc-EGW">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="02k-Lv-ZU9"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="45"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="iqy-iV-XRD" firstAttribute="leading" secondItem="vZm-Bl-WI6" secondAttribute="leading" id="3Mk-wp-cHF"/>
+                        <constraint firstAttribute="trailing" secondItem="iqy-iV-XRD" secondAttribute="trailing" id="Nxw-RO-MGF"/>
+                        <constraint firstItem="Fel-pc-EGW" firstAttribute="leading" secondItem="vZm-Bl-WI6" secondAttribute="leading" id="QS9-RK-gow"/>
+                        <constraint firstAttribute="bottom" secondItem="iqy-iV-XRD" secondAttribute="bottom" id="RUZ-Fy-q3s"/>
+                        <constraint firstItem="Fel-pc-EGW" firstAttribute="top" secondItem="vZm-Bl-WI6" secondAttribute="top" id="SXV-Al-nP2"/>
+                        <constraint firstAttribute="trailing" secondItem="Fel-pc-EGW" secondAttribute="trailing" id="nCi-Jm-QkF"/>
+                        <constraint firstAttribute="width" constant="90" id="tIr-sA-5cQ"/>
+                        <constraint firstAttribute="height" constant="120" id="vP7-xa-0xr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kos-ED-CWN" secondAttribute="trailing" id="8vk-UK-2Rt"/>
+                <constraint firstItem="kos-ED-CWN" firstAttribute="leading" secondItem="yow-8J-pI7" secondAttribute="leading" id="9Hh-hD-Y2Y"/>
+                <constraint firstAttribute="bottom" secondItem="kos-ED-CWN" secondAttribute="bottom" id="Iut-gU-UDu"/>
+                <constraint firstItem="vZm-Bl-WI6" firstAttribute="centerX" secondItem="kos-ED-CWN" secondAttribute="centerX" id="gPf-Et-GaZ"/>
+                <constraint firstItem="kos-ED-CWN" firstAttribute="top" secondItem="yow-8J-pI7" secondAttribute="top" id="gWn-th-xmR"/>
+                <constraint firstItem="vZm-Bl-WI6" firstAttribute="top" secondItem="yow-8J-pI7" secondAttribute="top" constant="80" id="t2r-5h-XFT"/>
+            </constraints>
+            <point key="canvasLocation" x="1.5" y="60.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ad_background" width="375" height="667"/>
+        <image name="avatar_default_big" width="85" height="85"/>
+    </resources>
+</document>

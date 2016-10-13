@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYPopoverViewController" customModule="XYWeiBo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popover_background" translatesAutoresizingMaskIntoConstraints="NO" id="Ec2-mr-zmp"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ytj-Ga-RjN">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ec2-mr-zmp" secondAttribute="trailing" id="6ZJ-UJ-Sdy"/>
+                <constraint firstItem="Ec2-mr-zmp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="A76-bY-hU7"/>
+                <constraint firstAttribute="bottom" secondItem="Ec2-mr-zmp" secondAttribute="bottom" id="Djq-i8-kKl"/>
+                <constraint firstItem="ytj-Ga-RjN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="E8V-1k-Uc0"/>
+                <constraint firstAttribute="bottom" secondItem="ytj-Ga-RjN" secondAttribute="bottom" constant="20" id="GyH-ii-5lE"/>
+                <constraint firstItem="Ec2-mr-zmp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="b8e-Q4-2ad"/>
+                <constraint firstAttribute="trailing" secondItem="ytj-Ga-RjN" secondAttribute="trailing" constant="20" id="jDG-e2-Zsc"/>
+                <constraint firstItem="ytj-Ga-RjN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="mcz-gA-qgI"/>
+            </constraints>
+            <point key="canvasLocation" x="40" y="45"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="popover_background" width="217" height="49"/>
+    </resources>
+</document>
