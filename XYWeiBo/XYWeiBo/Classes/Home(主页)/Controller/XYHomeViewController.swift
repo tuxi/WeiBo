@@ -100,7 +100,7 @@ extension XYHomeViewController {
     
     /// 添加提示label:当有新的数据更新时，提示用户更新了多少条新微博
     func setupTipLabel() {
-        navigationController?.navigationBar.insertSubview(tipLabel, at: 0)
+        navigationController?.view.insertSubview(tipLabel, at: 1)
         tipLabel.frame = CGRect(x: 0, y: 10, width: UIScreen.main.bounds.size.width, height: 32)
         tipLabel.backgroundColor = UIColor.orange
         tipLabel.textColor = UIColor.white
@@ -279,13 +279,13 @@ extension XYHomeViewController {
         self.tipLabel.isHidden = false
         UIView .animate(withDuration: 1.0, animations: {
             
-            self.tipLabel.frame.origin.y = 44
+            self.tipLabel.frame.origin.y = 64
             self.tipLabel.text = count == 0 ? "没有新数据" : "\(count)  条新微博"
             }) { (_) in
                 
                 UIView.animate(withDuration: 1.0, delay: 1.5, options: [], animations: { 
                     
-                    self.tipLabel.frame.origin.y = 10
+                    self.tipLabel.frame.origin.y = 32
                     }, completion: { (_) in
                         
                         self.tipLabel.isHidden = true
