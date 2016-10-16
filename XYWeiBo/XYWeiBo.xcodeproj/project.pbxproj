@@ -71,6 +71,8 @@
 		189C03EA1D9CB1DE00BE9A51 /* XYPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C03E91D9CB1DE00BE9A51 /* XYPresentationController.swift */; };
 		189C03EC1D9CCDD700BE9A51 /* XYPopoverAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C03EB1D9CCDD700BE9A51 /* XYPopoverAnimation.swift */; };
 		18B8CB221DB34757005D84F4 /* XYSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8CB211DB34757005D84F4 /* XYSQLiteManager.swift */; };
+		18B8CB291DB3A75C005D84F4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 18B8CB251DB3A75C005D84F4 /* LICENSE */; };
+		18B8CB2A1DB3A75C005D84F4 /* KILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B8CB281DB3A75C005D84F4 /* KILabel.m */; };
 		CC25354678F16C7D760D503E /* Pods_XYWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5D821F5DAEF944E3A7333B /* Pods_XYWeiBo.framework */; };
 		E5D318831E68F9FBA8485D1A /* Pods_XYWeiBoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1A739BEA955B795603FAA4 /* Pods_XYWeiBoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -163,6 +165,10 @@
 		189C03E91D9CB1DE00BE9A51 /* XYPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYPresentationController.swift; sourceTree = "<group>"; };
 		189C03EB1D9CCDD700BE9A51 /* XYPopoverAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYPopoverAnimation.swift; sourceTree = "<group>"; };
 		18B8CB211DB34757005D84F4 /* XYSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYSQLiteManager.swift; sourceTree = "<group>"; };
+		18B8CB251DB3A75C005D84F4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		18B8CB271DB3A75C005D84F4 /* KILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KILabel.h; sourceTree = "<group>"; };
+		18B8CB281DB3A75C005D84F4 /* KILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KILabel.m; sourceTree = "<group>"; };
+		18B8CB2B1DB3A7B3005D84F4 /* XYWeiBoBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYWeiBoBridge.h; sourceTree = "<group>"; };
 		55F29B058C3230D2C962E56F /* Pods-XYWeiBoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYWeiBoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XYWeiBoUITests/Pods-XYWeiBoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F45E7D956C9B3F6D392C3FC /* Pods-XYWeiBoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYWeiBoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XYWeiBoTests/Pods-XYWeiBoTests.release.xcconfig"; sourceTree = "<group>"; };
 		7385699F6532A02D2C7AA330 /* Pods-XYWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYWeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XYWeiBo/Pods-XYWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -533,6 +539,7 @@
 		189C02CB1D9AB26E00BE9A51 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				18B8CB231DB3A75C005D84F4 /* Lib */,
 				181D899A1D9AA8460004538F /* Assets.xcassets */,
 				181D899C1D9AA8460004538F /* LaunchScreen.storyboard */,
 				181D899F1D9AA8460004538F /* Info.plist */,
@@ -540,6 +547,7 @@
 				189C037F1D9B807C00BE9A51 /* Null.storyboard */,
 				189C03701D9B721300BE9A51 /* Resource */,
 				1897CEE81D9D3B45000A26F2 /* XYConst.swift */,
+				18B8CB2B1DB3A7B3005D84F4 /* XYWeiBoBridge.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -648,6 +656,32 @@
 				189C03951D9BFA9B00BE9A51 /* XYPopoverViewController.xib */,
 			);
 			path = UIPopover;
+			sourceTree = "<group>";
+		};
+		18B8CB231DB3A75C005D84F4 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				18B8CB241DB3A75C005D84F4 /* KILabel */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		18B8CB241DB3A75C005D84F4 /* KILabel */ = {
+			isa = PBXGroup;
+			children = (
+				18B8CB251DB3A75C005D84F4 /* LICENSE */,
+				18B8CB261DB3A75C005D84F4 /* Source */,
+			);
+			path = KILabel;
+			sourceTree = "<group>";
+		};
+		18B8CB261DB3A75C005D84F4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				18B8CB271DB3A75C005D84F4 /* KILabel.h */,
+				18B8CB281DB3A75C005D84F4 /* KILabel.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		2610E24AD026D104D54E0180 /* Frameworks */ = {
@@ -799,6 +833,7 @@
 				189C03971D9BFA9B00BE9A51 /* XYPopoverViewController.xib in Resources */,
 				187652B91DA0D6CA00277E0C /* XYComposeTitleView.xib in Resources */,
 				189C037E1D9B7DF000BE9A51 /* Profile.storyboard in Resources */,
+				18B8CB291DB3A75C005D84F4 /* LICENSE in Resources */,
 				185A1C6B1DA0B8D00000C6EB /* XYComposeViewController.xib in Resources */,
 				181D899B1D9AA8460004538F /* Assets.xcassets in Resources */,
 				182927FE1DA3A93B006BC6FB /* Emoticons.bundle in Resources */,
@@ -975,6 +1010,7 @@
 				18B8CB221DB34757005D84F4 /* XYSQLiteManager.swift in Sources */,
 				182928001DA3A93B006BC6FB /* XYEmoticAttachment.swift in Sources */,
 				189C038C1D9BAEA700BE9A51 /* XYVisitorView.swift in Sources */,
+				18B8CB2A1DB3A75C005D84F4 /* KILabel.m in Sources */,
 				1835F0E71DA4D2700060AB15 /* XYFindEmoticon.swift in Sources */,
 				180CD86B1D9E9E9F00DBFDF6 /* NSDate-Extension.swift in Sources */,
 				189C02D91D9ABAEF00BE9A51 /* XYProfileViewController.swift in Sources */,
@@ -1151,6 +1187,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sey.XYWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = XYWeiBo/Classes/Other/XYWeiBoBridge.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1167,6 +1204,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sey.XYWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = XYWeiBo/Classes/Other/XYWeiBoBridge.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

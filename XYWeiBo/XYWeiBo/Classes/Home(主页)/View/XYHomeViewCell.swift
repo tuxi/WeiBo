@@ -22,9 +22,9 @@ class XYHomeViewCell: UITableViewCell {
     @IBOutlet weak var vipView: UIImageView!
     @IBOutlet weak var verifiedView: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var contentLabel: KILabel!
     @IBOutlet weak var picCollectionView: XYPicConllectionView!
-    @IBOutlet weak var retweeted_statusLabel: UILabel!
+    @IBOutlet weak var retweeted_statusLabel: KILabel!
     @IBOutlet weak var retweetedStatusBg: UIView!
     @IBOutlet weak var toolView: UIView!
     
@@ -64,9 +64,9 @@ class XYHomeViewCell: UITableViewCell {
             
             // 7.微博内容
             let text = viewModel?.statusItem?.text
-            
+
             contentLabel.attributedText = XYFindEmoticon.shareInstance.getAttributeString(text: text!, labelFont: contentLabel.font)
-            
+        
             // 8.设置昵称的文字颜色
             screenNameLabel.textColor = viewModel!.vipImage == nil ? UIColor.black : UIColor.orange
         
@@ -128,14 +128,47 @@ class XYHomeViewCell: UITableViewCell {
         // 设置微博正文宽度的约束
         contentLabelWidthConstr.constant = UIScreen.main.bounds.width - 2 * edgeMargin
         
-        // 设置collectionView流水布局
-        // 取出流水布局
+        clickAttributeString()
+    }
+    
+    /// 监听微博正文和转发微博上面属性文本的点击
+    private func clickAttributeString() {
+        // 微博正文 监听@谁的点击
+        contentLabel.userHandleLinkTapHandler = { label, handle, range in
+            print("点击了谁" + "\(handle)" + "----文字的长度:" + "\(range.length)")
+        }
+        
+        // 微博正文 监听##话题的点击
+        contentLabel.hashtagLinkTapHandler = { label, hashtag, range in
+            print("点击的话题:" + "\(hashtag)" + "---文字的长度:" + "\(range.length)")
+        }
+        
+        // 微博正文 监听URL的点击
+        contentLabel.urlLinkTapHandler = { label, url, range in
+            print("点击的url:" + "\(url)" + "---文字的长度:" + "\(range.length)")
+        }
+        
+        // 转发微博正文 监听@谁的点击
+        retweeted_statusLabel.userHandleLinkTapHandler = { label, handle, range in
+            print("点击了谁" + "\(handle)" + "----文字的长度:" + "\(range.length)")
+        }
+        
+        // 转发微博正文 监听##话题的点击
+        retweeted_statusLabel.hashtagLinkTapHandler = { label, hashtag, range in
+            print("点击的话题:" + "\(hashtag)" + "---文字的长度:" + "\(range.length)")
+        }
+        
+        // 转发微博正文 监听URL的点击
+        retweeted_statusLabel.urlLinkTapHandler = { label, url, range in
+            print("点击的url:" + "\(url)" + "---文字的长度:" + "\(range.length)")
+        }
         
     }
+    
 
 
     // MARK:- 计算配图collectionView的尺寸
-    func caculatePicViewSize(count : Int) -> CGSize {
+    private func caculatePicViewSize(count : Int) -> CGSize {
         
         // 1.没有配图
         if count == 0 {

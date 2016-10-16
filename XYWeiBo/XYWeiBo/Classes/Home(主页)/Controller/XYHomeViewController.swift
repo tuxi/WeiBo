@@ -103,7 +103,7 @@ extension XYHomeViewController {
     func setupTipLabel() {
         navigationController?.view.insertSubview(tipLabel, at: 1)
         tipLabel.frame = CGRect(x: 0, y: 10, width: UIScreen.main.bounds.size.width, height: 32)
-        tipLabel.backgroundColor = UIColor.orange
+        tipLabel.backgroundColor = UIColor(red: 255.0/255, green: 147.0/255.0, blue: 255.0/255, alpha: 0.8)
         tipLabel.textColor = UIColor.white
         tipLabel.textAlignment = .center
         tipLabel.isHidden = true
@@ -215,7 +215,7 @@ extension XYHomeViewController {
                 querySql += " AND statusID <= \(temp)"
             }
             querySql += " order by statusID desc limit 20" // statusID按照降序，且每页返回20条微博
-            print(querySql)
+//            print(querySql)
             
             // 3.0执行SQL语句
             // 定义一个微博视图模型数组，用于将本地数据库查询到的数据添加到里面的
