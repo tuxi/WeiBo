@@ -37,7 +37,7 @@
         <!--发现-->
         <scene sceneID="AdD-TO-mn5">
             <objects>
-                <navigationController id="MoD-2c-p61" sceneMemberID="viewController">
+                <navigationController id="MoD-2c-p61" customClass="XYNavigationController" customModule="XYWeiBo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="发现" image="tabbar_discover" id="gaH-64-zhk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IIp-EB-fck">

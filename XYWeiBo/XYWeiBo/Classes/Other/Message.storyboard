@@ -37,7 +37,7 @@
         <!--消息-->
         <scene sceneID="2Hd-27-ebe">
             <objects>
-                <navigationController id="Yv7-oq-iod" sceneMemberID="viewController">
+                <navigationController id="Yv7-oq-iod" customClass="XYNavigationController" customModule="XYWeiBo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="消息" image="tabbar_message_center" id="8wc-pS-NKS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="l6G-nO-EZK">

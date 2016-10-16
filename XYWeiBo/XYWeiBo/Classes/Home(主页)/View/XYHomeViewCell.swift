@@ -190,10 +190,11 @@ class XYHomeViewCell: UITableViewCell {
             
             // 取出沙盒中SDWebImage缓存的图片
             let urlString = viewModel?.picURLs.first?.absoluteString // 单张图片时，数组中只有一个
-            let image = SDWebImageManager.shared().imageCache.imageFromDiskCache(forKey: urlString)
-            // 动态设置流水布局的itemSize
-            flowLayout.itemSize = CGSize(width: (image?.size.width)! * 2, height: (image?.size.height)! * 2)
-            return CGSize(width: (image?.size.width)! * 2, height: (image?.size.height)! * 2)
+            if let image = SDWebImageManager.shared().imageCache.imageFromDiskCache(forKey: urlString) {
+                // 动态设置流水布局的itemSize
+                flowLayout.itemSize = CGSize(width: image.size.width * 2, height: image.size.height * 2)
+                return CGSize(width: image.size.width * 2, height: image.size.height * 2)
+            }
         }
         
         // 3.计算每个配图imageView的宽度和高度

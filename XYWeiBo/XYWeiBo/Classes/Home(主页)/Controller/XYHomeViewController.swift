@@ -69,7 +69,12 @@ extension XYHomeViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(imageName: "navigationbar_friendattention")
         
         // 2.右侧的item
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(imageName: "navigationbar_pop")
+        let rightButton = UIButton(type: .custom)
+        rightButton.setImage(UIImage(named: "navigationbar_pop"), for: UIControlState.normal)
+        rightButton.setImage(UIImage(named: "navigationbar_pop_highlighted"), for: UIControlState.highlighted)
+        rightButton.sizeToFit()
+        rightButton.addTarget(self, action: #selector(rightButtonClick), for: UIControlEvents.touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButton)
         
         // 3.设置titleView
         titleButton.setTitle(XYUserAccountViewModel.shareInstance.userAccount?.screen_name, for: .normal)
@@ -140,6 +145,13 @@ extension XYHomeViewController {
         
     }
     
+    /// 监听导航条右侧按钮的点击事件
+    func rightButtonClick() {
+    
+        // 跳转到二维码扫描界面
+        navigationController?.pushViewController(QRReadViewController(), animated: true)
+    }
+    
     /// 接收到点击微博图片的通知
     func showPhotoBrower(note: Notification) {
         
@@ -164,6 +176,7 @@ extension XYHomeViewController {
         
         present(photoBrowerVc, animated: true, completion: nil)
     }
+    
 }
 
 
@@ -251,7 +264,6 @@ extension XYHomeViewController {
                     print("从本地数据库加载数据")
                     
                     if isNewData {
-                        
                         self.statuesViewModels = viewModels + self.statuesViewModels
                     } else {
                         self.statuesViewModels += viewModels

@@ -69,7 +69,7 @@ extension XYPhotoBrowserViewController {
         let views = ["closeButton": closeButton, "saveButton": saveButton]
         var constrs = NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[closeButton(90)]", options: [], metrics: nil, views: views)
         constrs += NSLayoutConstraint.constraints(withVisualFormat: "V:[closeButton(32)]-20-|", options: [], metrics: nil, views: views)
-        constrs += NSLayoutConstraint.constraints(withVisualFormat: "H:[saveButton(90)]-20-|", options: [], metrics: nil, views: views)
+        constrs += NSLayoutConstraint.constraints(withVisualFormat: "H:[saveButton(90)]-40-|", options: [], metrics: nil, views: views)
         constrs += NSLayoutConstraint.constraints(withVisualFormat: "V:[saveButton(32)]-20-|", options: [], metrics: nil, views: views)
         self.view.addConstraints(constrs)
         

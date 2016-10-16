@@ -7,3 +7,5 @@
 //
 
 #import "KILabel.h"
+#import "QRReadViewController.h"
+

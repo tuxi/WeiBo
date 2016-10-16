@@ -230,7 +230,7 @@
         <!--首页-->
         <scene sceneID="QnS-iZ-qUA">
             <objects>
-                <navigationController id="mGh-kI-yQx" sceneMemberID="viewController">
+                <navigationController id="mGh-kI-yQx" customClass="XYNavigationController" customModule="XYWeiBo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" id="JQ1-pG-p5u"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XMx-um-n1y">

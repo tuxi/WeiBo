@@ -87,7 +87,7 @@ extension XYMainViewController {
     func composeBtnClick() {
         
         let composeVc = XYComposeViewController()
-        let composeNav = UINavigationController(rootViewController: composeVc)
+        let composeNav = XYNavigationController(rootViewController: composeVc)
         
         present(composeNav, animated: true, completion: nil)
 
