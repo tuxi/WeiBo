@@ -10,7 +10,7 @@ target 'XYWeiBo' do
       pod 'SVProgressHUD'
       pod 'SDWebImage'
       pod 'MJRefresh'
-      
+      pod 'FMDB'
       
       
 

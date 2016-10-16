@@ -33,11 +33,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
         
+        // 打开数据库
+        SQLiteManager.sharedInstance.openDB(dbName: "status.sqlite")
+        
         //print(XYUserAccountViewModel.shareInstance.userAccount?.access_token)
         
         return true
     }
 
-
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        
+        // 应用程序进入后台时，清除三天前本地缓存的微博数据
+        SQLiteManager.sharedInstance.clearStatusData(howMuchDaysAgo: 3)
+    }
 }
 
