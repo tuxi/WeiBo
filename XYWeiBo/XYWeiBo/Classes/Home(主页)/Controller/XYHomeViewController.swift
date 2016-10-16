@@ -72,7 +72,7 @@ extension XYHomeViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(imageName: "navigationbar_pop")
         
         // 3.设置titleView
-        titleButton.setTitle("-狐狸浅的围巾", for: .normal)
+        titleButton.setTitle(XYUserAccountViewModel.shareInstance.userAccount?.screen_name, for: .normal)
         // 给按钮添加点击事件
         titleButton.addTarget(self, action: #selector(titleButtonClick(_:)), for: .touchUpInside)
         navigationItem.titleView = titleButton
