@@ -62,6 +62,11 @@
     }];
 }
 
+- (void)dealloc {
+    
+    NSLog(@"QRReadViewController delloc");
+}
+
 
 #pragma mark - 颜色
 //获取颜色
@@ -86,6 +91,7 @@
               alpha:1.0];
     return result;
 }
+
 
 
 @end
